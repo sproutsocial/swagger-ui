@@ -20,7 +20,8 @@ class MainView extends Backbone.View
         @model.validatorUrl = null
       else
         # Default validator
-        @model.validatorUrl = "http://online.swagger.io/validator"
+        # disable validator, dont send our shit to some 3rd party site @model.validatorUrl = "http://online.swagger.io/validator"
+        @model.validatorUrl = null
  
   render: ->
     if @model.securityDefinitions
